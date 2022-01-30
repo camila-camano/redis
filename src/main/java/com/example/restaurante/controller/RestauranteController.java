@@ -29,9 +29,18 @@ public class RestauranteController {
         return service.findAll();
     }
 
-    @PostMapping("/mensajes")
+    @GetMapping("/getbyname")
+    public Restaurante getRestauranteByName(@RequestParam String name){
+        log.info("GET restaurante por nombre");
+        return service.getRestauranteByName(name);
+    }
+
+    @PostMapping("/post")
     public Restaurante createMessage(@RequestBody Restaurante restaurante) {
         log.info("POST crear restaurante");
         return service.create(restaurante);
     }
+
+
+
 }

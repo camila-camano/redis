@@ -8,5 +8,5 @@ public interface RestauranteService {
 
     Restaurante create(Restaurante restaurante);
     List<Restaurante> findAll();
-    //Restaurante getMessageById(Long id);
+    Restaurante getRestauranteByName(String name);
 }
